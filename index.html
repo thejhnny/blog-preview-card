@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Blog preview card</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap");
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Custom colors
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            yellow: "hsl(47, 88%, 63%)",
+                            white: "hsl(0, 0%, 100%)",
+                            gray: {
+                                500: "hsl(0, 0%, 42%)",
+                                950: "hsl(0, 0%, 7%)",
+                            },
+                        },
+                        fontFamily: {
+                            figtree: ["Figtree", "sans-serif"], // Add Figtree font
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="font-figtree text-base bg-yellow flex flex-col items-center justify-center min-h-screen"
+    >
+        <article
+            class="bg-white p-6 max-w-sm rounded-2xl border-solid border border-black shadow-[10px_10px_0px_#000000]"
+        >
+            <img
+                class="rounded-xl"
+                src="./assets/images/illustration-article.svg"
+                alt="article image"
+            />
+            <div class="bg-yellow inline-block px-3 py-1 mt-6 rounded">
+                <span class="text-sm font-bold">Learning</span>
+            </div>
+            <p class="text-gray-950 text-sm my-3">Published 21 Dec 2023</p>
+            <h2 class="text-gray-950 text-2xl font-extrabold hover:text-yellow cursor-pointer">
+                HTML & CSS foundations
+            </h2>
+            <p class="text-gray-500 text-base my-5">
+                These languages are the backbone of every website, defining
+                structure, content, and presentation
+            </p>
+            <div class="author-info flex items-center">
+                <img
+                    class="h-8"
+                    src="./assets/images/image-avatar.webp"
+                    alt=""
+                />
+                <p class="text-sm font-bold px-3">Greg Hooper</p>
+            </div>
+        </article>
+
+        <div class="pt-10 text-xs text-center">
+            Challenge by
+            <a
+                class="text-[hsl(228,45%,44%)]"
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by
+            <a class="text-[hsl(228,45%,44%)]" href="#">Johnny Siu</a>.
+        </div>
+    </body>
+</html>
